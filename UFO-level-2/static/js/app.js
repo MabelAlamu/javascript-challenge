@@ -7,6 +7,14 @@ var tbody = d3.select("tbody");
 var button = d3.select("#filter-btn");
 var dateField = d3.select("#datetime");
 
+// Get the value property of the input elements.
+// Set text to lowercase as the values in data file are all in lowercase
+var selectedDatetime = d3.select("#datetime").property("value");
+var selectedCity = d3.select("#city").property("value").toLowerCase();
+var selectedState = d3.select("#state").property("value").toLowerCase();
+var selectedCountry = d3.select("#country").property("value").toLowerCase();
+var selectedShape = d3.select("#shape").property("value").toLowerCase();
+
 
 // Arrow function that builds the HTML table
     ufoData.forEach(row => {
